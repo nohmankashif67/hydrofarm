@@ -1,0 +1,77 @@
+<ion-app>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <!-- <ion-navbar class="navbar"> -->
+  <ion-title>
+    <ion-icon src="../assets/notification-bell.svg" class="bell">
+    </ion-icon>
+    <div class="ion-text-center">
+      <img src="../assets/top-right-logo.svg" class="logo">
+    </div>
+  </ion-title>
+  <!-- </ion-navbar> -->
+</ion-header>
+
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <!-- <br> -->
+    <h1 class="ion-text-center">Malfunctions &ensp;</h1>
+    
+<ion-card class="detail" *ngFor="let result of  total_installation">
+  <ion-card-title class="details">Client : {{result?.Client}}</ion-card-title>
+  <ion-card-subtitle class="sub-details">Location : {{result?.Location}}</ion-card-subtitle>
+  <ion-card-subtitle class="sub-details">Installation Level : {{result?.Installation_Level}}</ion-card-subtitle>
+  <ion-card-subtitle class="sub-details">Installation Status : {{result?.Installation_Status}}</ion-card-subtitle>
+  <ion-card-subtitle class="sub-details">Date assigned : {{result?.Date_assigned}}</ion-card-subtitle>
+</ion-card>
+</div>
+<div class="ion-text-center">
+  <button type="button" class="btn btn-secondary" (click)="back()">Back</button>
+</div>
+&nbsp;
+&nbsp;
+
+</ion-content>
+
+<!-- <footer> -->
+  <div class="white1"></div>
+  <ion-tab-bar slot="bottom">
+      <ion-tab-button (click)="home()">
+          <ion-icon src="assets/user.svg"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/email.svg" (click)="language()"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+          <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button" (click)="home()">
+              <ion-fab-button>
+                  <ion-icon src="assets/home.svg" (click)="home()"></ion-icon>
+              </ion-fab-button>
+          </ion-fab>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/setting.svg" (click)="settings()"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+      </ion-tab-button>
+  </ion-tab-bar>
+
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed"
+  style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;" (click)="home()">
+  <ion-fab-button class="fab-button">
+      <ion-icon name="home"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<!-- <"footer"> -->
+
+</ion-app>

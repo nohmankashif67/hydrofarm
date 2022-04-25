@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41.254" height="41.254" viewBox="0 0 41.254 41.254">
+  <defs>
+    <pattern id="pattern" width="1" height="1" viewBox="2.034 2.876 37.185 37.185">
+      <image preserveAspectRatio="xMidYMid slice" width="41.254" height="58.318" xlink:href="NoPath-2-image.jpg"/>
+    </pattern>
+  </defs>
+  <g id="NoPath" stroke="#a5c9ff" stroke-width="1" fill="url(#pattern)">
+    <circle cx="20.627" cy="20.627" r="20.627" stroke="none"/>
+    <circle cx="20.627" cy="20.627" r="20.127" fill="none"/>
+  </g>
+</svg>

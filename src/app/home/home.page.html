@@ -1,0 +1,122 @@
+<div class="nav-wrapper" style="background: white;height: 5em;"></div>
+<ion-app> 
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<ion-header class="header">
+    <!-- <ion-navbar class="navbar"> -->
+    <ion-title>
+        <ion-icon src="../assets/notification-bell.svg" class="bell">
+        </ion-icon>
+        <div class="ion-text-center">
+            <img src="../assets/top-right-logo.svg" class="logo">
+        </div>
+    </ion-title>
+    <!-- </ion-navbar> -->
+</ion-header>
+
+<div class="white"></div>
+
+   <ion-content overflow-scroll="true">
+    <div class="flex-container">
+        <div class="card" (click)="totalmalfunctions()">
+            <div class="ion-text-center">
+                <h2 class="text"> 157</h2>
+            </div>
+            <div class="card-body">
+                <div class="ion-text-center">
+                    <h2 class="card-title">Total Malfunctions</h2>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+        &nbsp;
+        <div class="card" (click)="solvedmalfunction()">
+            <div class="ion-text-center">
+                <h2 class="text"> 139</h2>
+            </div>
+            <div class="card-body">
+                <div class="ion-text-center">
+                    <h6 class="card-title">Solved Malfunctions</h6>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    <div class="flex-container">
+        <div class="card" (click)="assignedmalfunction()">
+            <div class="ion-text-center">
+                <img class="card-img-top" src="../../assets/hazard-sign.svg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+                <div class="ion-text-center">
+                    <h6 class="card-title1">Assign Malfunctions</h6>
+                </div>
+            </div>
+        </div>
+        &nbsp;
+        &nbsp;
+        <div class="card" (click)="bills()">
+            <div class="ion-text-center">
+                <img class="card-img-top" src="../../assets/bill.svg" alt="Card image cap">
+            </div>
+            <div class="card-body">
+                <div class="ion-text-center">
+                    <h6 class="card-title1">Bills</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+<h1 class="tittle">Today's Malfunctions</h1>
+
+
+<ion-card class="detail" (click)="todaymalfunction()" *ngFor="let result of  malfunction_data">
+    <ion-card-title class="details">Malfunction # {{result?.malfunction_id}} </ion-card-title>
+    <ion-card-subtitle class="sub-details">Client Name : {{result?.Client_Name}}</ion-card-subtitle>
+    <ion-card-subtitle class="sub-details">Location : {{result?.Client_Location}}</ion-card-subtitle>
+</ion-card>
+
+
+</ion-content>
+
+<!-- <footer> -->
+    <div class="white1"></div>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button (click)="home()">
+            <ion-icon src="assets/user.svg"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button>
+            <ion-icon src="assets/email.svg" (click)="language()"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button>
+            <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button" (click)="home()">
+                <ion-fab-button>
+                    <ion-icon src="assets/home.svg" (click)="home()"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+        </ion-tab-button>
+
+        <ion-tab-button>
+            <ion-icon src="assets/setting.svg" (click)="settings()"></ion-icon>
+        </ion-tab-button>
+
+        <ion-tab-button>
+            <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+        </ion-tab-button>
+    </ion-tab-bar>
+
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed"
+    style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;" (click)="home()">
+    <ion-fab-button class="fab-button">
+        <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+</ion-fab>
+
+<!-- <"footer"> -->
+
+</ion-app>
