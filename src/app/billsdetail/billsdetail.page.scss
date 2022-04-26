@@ -166,22 +166,4 @@ hr {
   
   
   
-  @media only screen and (max-width: 600px) {
   
-    ::ng-deep .paymentmodal {
-      padding: 10% 3%;
-   
-    } 
-  }
-  
-  
-  ion-modal::part(content){
-    background-color: red !important;
-             height:100%;
-  }
-  
-  ::ng-deep .payment-class .modal-wrapper{
-    height: 20em!important;
-    margin: 1em;
-    --border-radius:10px;
-}

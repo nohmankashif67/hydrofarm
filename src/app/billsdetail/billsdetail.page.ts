@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController, Platform } from '@ionic/angular';
 import { PaymentmodalPage } from '../paymentmodal/paymentmodal.page';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -78,24 +79,16 @@ export class BillsdetailPage implements OnInit {
   }
 
   async presentModalUpdatePayment() {
-    console.log('presentModalUpdatePayment popup');
+
     const modal = await this.modalController.create({
       component: PaymentmodalPage,
-      cssClass: 'paymentmodal'
+      cssClass: 'transparent-modal'
     });
     return await modal.present();
   }
 
 
 
-async presentModalPayment() {
-      console.log('emod property is accessible')
-      const modal = await this.modalController.create({
-        component: PaymentmodalPage ,
-        cssClass: 'paymentmodal'
-      });
-      return await modal.present();
-    }
 
 
 
