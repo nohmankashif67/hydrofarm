@@ -12,6 +12,35 @@ export class HomePage implements OnInit {
   home(){
     this.router.navigateByUrl('home');
   }
+
+  profile(){
+    this.router.navigateByUrl('profile');
+  }
+
+  settings(){
+    this.router.navigateByUrl('setting');
+  }
+
+  inquiries(){
+    this.router.navigateByUrl('inquiries');
+  }
+
+  language(){
+    this.router.navigateByUrl('language');
+  }
+
+  notification(){
+    this.router.navigateByUrl('setting');
+  }
+
+  notifications(){
+    this.router.navigateByUrl('notifications');
+  }
+
+  
+
+
+
   totalmalfunctions(){
     console.log('inside Malfunctions');
     this.router.navigateByUrl('newmalfunction')

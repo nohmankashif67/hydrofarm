@@ -28,7 +28,7 @@
 
 .transparent-modal{
     &::part(backdrop){
-        background-color: black;
+        background-color: rgb(0, 0, 0);
     }
 
     &::part(content){

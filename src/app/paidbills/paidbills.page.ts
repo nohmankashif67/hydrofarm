@@ -38,20 +38,20 @@ export class PaidbillsPage implements OnInit {
       bill_id: 'TD24153',
       bill_amount: '350 Riyals',
       bill_type: 'Parts',
-      bill_status: 'unpaid',
+      bill_status: 'paid',
       bill_date: 'Sunday,23-03-2020'
     },
     {
       bill_id: 'TD24153',
-      bill_amount: '350 Riyals',
-      bill_status: 'unpaid',
+      bill_amount: '250 Riyals',
+      bill_status: 'paid',
       bill_date: 'Sunday,23-03-2020'
     },
     {
       bill_id: 'TD24153',
-      bill_amount: '350 Riyals',
+      bill_amount: '150 Riyals',
       bill_type: 'Parts',
-      bill_status: 'unpaid',
+      bill_status: 'paid',
       bill_date: 'Sunday,23-03-2020',
 
     },

@@ -22,7 +22,7 @@
   <div class="container">
     <div *ngIf="bill_data ">
       <h1 class="ion-text-center">Bill #{{bill_data[id]?.bill_id}}</h1>
-      <ion-text class="date">Date: {{bill_data[id]?.bill_date}}</ion-text>
+      <ion-text class="date">{{bill_data[id]?.bill_date}}</ion-text>
       <br>
       <br>
       <h2 class="h2">Bill Details </h2>
@@ -47,13 +47,13 @@
           <ion-text class="textright2">{{bill_data[id]?.bill_status}}</ion-text>
         </div>
       </div>
-      <hr class="hr">
+      <!-- <hr class="hr">
       <div class="leftcol">
         <h2 class="h2">Receipt Status</h2>
       </div>
       <div class="rightcol">
         <ion-text class="textright3">{{bill_data[id]?.bill_receipt_status}}</ion-text>
-      </div>
+      </div> -->
 
       <br>
       <br>
@@ -68,7 +68,7 @@
       <div class="ion-text-center">
         <ion-tab-bar class="menu-bar">
           <button type="button" class="btn btn-primary " id="language"
-            (click)="presentModalUpdatePayment()">Update Payment</button>
+            (click)="presentModalUpdatePayment()">Update</button>
           <div class="divider"></div>
           <button type="button" class="btn btn-secondary " (click)="back()">Back</button>
         </ion-tab-bar>

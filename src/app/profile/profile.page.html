@@ -1,0 +1,136 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <ion-title>
+     <ion-icon src="../../assets/notification-bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/top-right-logo.svg" class="logo">
+      </div>
+    </ion-title>
+</ion-header>
+<div class="nav-wrapper" style="background: white;height: 1em;"></div>
+<br>
+<h1 class="ion-text-center">Profile</h1>
+<!-- <div class="white"></div> -->
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <div class="flex-container1">
+      <h6 class="client">Client :</h6>
+      <h3 class="value">{{profile_data.client_name}}</h3>
+    </div>
+      <hr class="hr">
+    <div class="flex-container1">
+    <h6 class="client">Contact Number :</h6>
+    <h3 class="value">{{profile_data.client_phoneno}}</h3>
+  </div>
+    <hr class="hr">
+    <div class="flex-container1">
+    <h6 class="client">City : </h6>
+    <h3 class="value">{{city}}</h3>
+  </div>
+    <hr class="hr">
+    <div class="flex-container1">
+    <h6 class="client">Location :</h6>
+    <!-- <ion-icon src="assets/eye.svg" class="eye"></ion-icon> -->
+    <h3 class="value">{{profile_data.client_location}}</h3>
+  </div>
+    <hr class="hr">
+    <div class="flex-container1">
+    <h6 class="client">Building Type : </h6>
+    <h3 class="value">{{profile_data.building_type}}</h3>
+  </div>
+    <hr class="hr">
+    <div class="flex-container1">
+    <h6 class="client">Number of Lifts : </h6>
+    <h3 class="value">{{profile_data.no_of_lifts}}</h3>
+  </div>
+    <!-- <div *ngFor="let result of lifts;let i=index">
+    <ion-text class="date">Code:{{lifts[i].code}} Type:{{lifts[i].Lift_Type}} Door Type:{{lifts[i].Door_Type}} Total Stops:{{lifts[i].Total_Stops}} <br></ion-text>
+  </div> -->
+    <hr class="hr">
+    <h6 class="client">Building Photo</h6>
+  <!-- <br>
+  <br> -->
+ <div class="flex-container" style="display: flex;
+  justify-content: center;margin-left: -1em;">
+<img src="../../assets/cabin.svg" class="machine">
+  </div>
+  <div class="flex-container1">
+  <h6 class="client">Maintenance Start Date:</h6>
+  <h3 class="value">{{profile_data.maintenance_start_date}}</h3>
+</div>
+  <hr class="hr">
+  <div class="flex-container1">
+  <h6 class="client">Maintenance End Date:</h6>
+  <h3 class="value">{{profile_data.maintenance_end_date}}</h3>
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Completed Maintenance Visit</h6>
+  <!-- <ion-icon src="assets/eye.svg" class="icon"></ion-icon> -->
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Uncompleted Maintenance Visit</h6>
+  <!-- <ion-icon src="assets/eye.svg" class="icon"></ion-icon> -->
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Unpaid Bills</h6>
+  <!-- <ion-icon src="assets/eye.svg" class="icon"></ion-icon> -->
+</div>
+  <hr class="hr">
+  <div class="flex-container0">
+  <h6 class="client">Download Contract File</h6>
+  <!-- <ion-icon src="assets/eye.svg" class="icon"></ion-icon> -->
+</div>
+  <br>
+  <div class="flex-container0" (click)="logout()">
+  <h6 class="logout">Logout</h6>
+  <ion-icon src="../../assets/logout.svg" class="icon"></ion-icon>
+  </div>
+</div>
+
+    </ion-content>
+
+    <!-- <footer> -->
+      <!-- <div class="white1"></div> -->
+      <ion-tab-bar slot="bottom">
+          <ion-tab-button >
+              <ion-icon src="assets/user.svg" (click)="profile()"></ion-icon>
+          </ion-tab-button>
+  
+          <ion-tab-button>
+              <ion-icon src="assets/email.svg" (click)="language()"></ion-icon>
+          </ion-tab-button>
+          <ion-tab-button>
+              <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button" (click)="home()">
+                  <ion-fab-button>
+                      <ion-icon src="assets/home.svg" (click)="home()"></ion-icon>
+                  </ion-fab-button>
+              </ion-fab>
+          </ion-tab-button>
+  
+          <ion-tab-button>
+              <ion-icon src="assets/setting.svg" (click)="settings()"></ion-icon>
+          </ion-tab-button>
+  
+          <ion-tab-button>
+              <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+          </ion-tab-button>
+      </ion-tab-bar>
+  
+  
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed"
+      style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;" (click)="home()">
+      <ion-fab-button class="fab-button">
+          <ion-icon name="home"></ion-icon>
+      </ion-fab-button>
+  </ion-fab>
+  
+  <!-- <"footer"> -->
+

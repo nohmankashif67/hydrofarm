@@ -59,6 +59,34 @@ const routes: Routes = [
   {
     path: 'updatemalfunction',
     loadChildren: () => import('./updatemalfunction/updatemalfunction.module').then( m => m.UpdatemalfunctionPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'setting',
+    loadChildren: () => import('./setting/setting.module').then( m => m.SettingPageModule)
+  },
+  {
+    path: 'inquiries',
+    loadChildren: () => import('./inquiries/inquiries.module').then( m => m.InquiriesPageModule)
+  },
+  {
+    path: 'language',
+    loadChildren: () => import('./language/language.module').then( m => m.LanguagePageModule)
+  },
+  {
+    path: 'notificaton',
+    loadChildren: () => import('./notificaton/notificaton.module').then( m => m.NotificatonPageModule)
+  },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
   }
 ];
 @NgModule({

@@ -1,0 +1,125 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select</title>
+</head>
+<ion-header class="header">
+  <ion-title>
+     <ion-icon src="../../assets/notification-bell.svg" (click)="notifications()" class="bell">
+      </ion-icon>
+      <div class="ion-text-right">
+        <img src="../../assets/top-right-logo.svg" class="logo">
+      </div>
+    </ion-title>
+</ion-header>
+<div class="nav-wrapper" style="background: white;height: 4em;"></div>
+<ion-content overflow-scroll="true">
+  <div class="container">
+    <h1 class="ion-text-center">Inquiries</h1>
+
+    <div class="tabs">
+      <ion-tab-bar slot="top">
+        <button type="button" class="btn btn-primary" (click)="faqs()" >FAQ</button>
+    <div class="divider"></div>
+        <button type="button" class="btn btn-secondary" (click)="inquiries()" >Inquiries</button>
+    </ion-tab-bar>
+    </div>
+<br>
+    <ion-card class="colorcard1" *ngFor="let result of inquiry_data let i=index">
+      <div class="flex-container">
+        <div class="leftdiv">
+          <div [ngClass]='result?.inquiry_status == "Done" ?"greendiv":"reddiv"'></div>
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Inquiry Type: {{result?.inquiry_type}}</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Date:{{result?.inquiry_date}}</ion-text>
+            </div>
+            <div class="status">
+              <ion-text> Status : {{result?.inquiry_status}}</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card>
+    <!-- <ion-card class="card">
+      <div class="flex-container">
+        <div style="float: left;">
+          <div class="colordiv2"></div>
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Inquiry Type C</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sunday 22-02-2020</ion-text>
+            </div>
+            <div class="status">
+              <ion-text> Status : Done</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card> -->
+    <!-- <ion-card class="card">
+      <div class="flex-container">
+        <div style="float: left;">
+          <div class="colordiv3"></div>
+        </div>
+        <div class="flex-container2">
+          <h6 class="visit">Inquiry Type C</h6>
+          <div class="flex-container3">
+            <div class="date">
+              <ion-text>Sunday 22-02-2020</ion-text>
+            </div>
+            <div class="status">
+              <ion-text> Status : Waiting</ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-card> -->
+    <div class="ion-text-center">
+      <ion-button class="newbutton" shape="round"(click)="newinquiry()">New Inquiry</ion-button>
+    </div>
+    <br>
+    <br>
+  </div>
+</ion-content>
+
+<!-- <footer> -->
+  <div class="white1"></div>
+  <ion-tab-bar slot="bottom">
+      <ion-tab-button >
+          <ion-icon src="assets/user.svg" (click)="profile()"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/email.svg" (click)="language()"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+          <ion-fab vertical="bottom" horizontal="center" slot="fixed" class="fab-button" (click)="home()">
+              <ion-fab-button>
+                  <ion-icon src="assets/home.svg" (click)="home()"></ion-icon>
+              </ion-fab-button>
+          </ion-fab>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/setting.svg" (click)="settings()"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button>
+          <ion-icon src="assets/question.svg" (click)="inquiries()"></ion-icon>
+      </ion-tab-button>
+  </ion-tab-bar>
+
+
+<ion-fab vertical="bottom" horizontal="center" slot="fixed"
+  style="background-color: #194E78; margin-bottom: 7px; border-radius: 30px;" (click)="home()">
+  <ion-fab-button class="fab-button">
+      <ion-icon name="home"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<!-- <"footer"> -->

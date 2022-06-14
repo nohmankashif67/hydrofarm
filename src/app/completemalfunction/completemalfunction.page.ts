@@ -37,7 +37,7 @@ export class CompletemalfunctionPage implements OnInit {
     this.router.navigateByUrl('newmalfunction');
 }
   completed() {
-    this.router.navigateByUrl('completemalfunction');
+    this.router.navigateByUrl('solvedmalfunctions');
   }
   malfunctionsDetails() {
     this.router.navigateByUrl('malfunctiondetail');
